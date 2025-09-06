@@ -1,0 +1,3 @@
+alias getgithubhost="curl https://raw.hellogithub.com/hosts"
+alias setproxy='export HTTPS_PROXY=${PROXY:-http://127.0.0.1:7890} HTTP_PROXY=${PROXY:-http://127.0.0.1:7890} ALL_PROXY=${PROXY:-http://127.0.0.1:7890}'
+alias unsetproxy='unset HTTPS_PROXY HTTP_PROXY ALL_PROXY'

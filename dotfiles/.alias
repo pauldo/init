@@ -1,9 +1,7 @@
+alias l='ls -al'
 alias getip="curl https://ipinfo.io/json"
 alias getweather="curl https://wttr.in"
-alias getgithubhost="curl https://raw.hellogithub.com/hosts"
 alias getspeed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
-alias setproxy='export HTTPS_PROXY=${PROXY:-http://127.0.0.1:7890} HTTP_PROXY=${PROXY:-http://127.0.0.1:7890} ALL_PROXY=${PROXY:-http://127.0.0.1:7890}'
-alias unsetproxy='unset HTTPS_PROXY HTTP_PROXY ALL_PROXY'
 alias installbrew='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 alias installchsrc='curl https://chsrc.run/posix | sudo bash'
 alias mkdatedir='mkdir $(date '+%Y%m%d')'

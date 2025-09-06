@@ -1,13 +1,11 @@
-## Prerequisite
-
-- openssh
-- git
-- stow
-
 ## Install
 
-1. `stow .`
-1. `echo "source ~/.alias" >> ~/.bashrc`
+1. `git clone http://github.com/pauldo/init`
+1. `cd init`
+1. `source dotfiles/.appendshrc`
+1. `installbrew`
+1. `brew install stow`
+1. `./init.sh`
 
 ## Software
 

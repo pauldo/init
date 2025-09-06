@@ -1,0 +1,14 @@
+export PROXY="http://127.0.0.1:7890"
+export GHSSH="ssh://git@ssh.github.com:443"
+export GHPROXY1="https://gitclone.com/github.com"
+export GHPROXY2="https://kkgithub.com"
+export GHPROXY3="https://gitdl.cn/https://github.com"
+export GHPROXY4="https://mirror.ghproxy.com/https://github.com"
+export GHPROXY5="https://githubfast.com"
+export GHPROXY6="https://ghproxy.net/https://github.com"
+
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+
+[[ -f $HOME/init/proxy/.alias_proxy ]] && source $HOME/init/dotfiles/.alias_proxy
+
