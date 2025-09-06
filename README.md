@@ -9,7 +9,7 @@
 1. `stow .`
 1. `echo "source ~/.alias" >> ~/.bashrc`
 
-# Software
+## Software
 
 - [helix](https://docs.helix-editor.com/master/)
 - [lazyvim](https://www.lazyvim.org/configuration/lazy.nvim)
