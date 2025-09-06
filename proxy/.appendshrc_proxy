@@ -10,5 +10,5 @@ export GHPROXY6="https://ghproxy.net/https://github.com"
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 
-[[ -f $HOME/init/proxy/.alias_proxy ]] && source $HOME/init/dotfiles/.alias_proxy
+[[ -f $HOME/.alias_proxy ]] && source $HOME/.alias_proxy
 
