@@ -4,5 +4,5 @@ alias getweather="curl https://wttr.in"
 alias getspeed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias installbrew='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 alias installchsrc='curl https://chsrc.run/posix | sudo bash'
-alias mkdatedir='mkdir $(date '+%Y%m%d')'
+alias mkdatedir='mkdir $(date "+%Y%m%d")'
 alias checkrestriction="bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)"
