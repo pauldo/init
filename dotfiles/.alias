@@ -1,4 +1,6 @@
 alias l='ls -al'
+alias v='nvim'
+alias sudo='sudo env "PATH=$PATH" '
 alias getip="curl https://ipinfo.io/json"
 alias getweather="curl https://wttr.in"
 alias getspeed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
