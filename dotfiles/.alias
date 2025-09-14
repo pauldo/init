@@ -4,6 +4,7 @@ alias sudo='sudo env "PATH=$PATH" '
 alias getip="curl https://ipinfo.io/json"
 alias getweather="curl https://wttr.in"
 alias getspeed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias installomz='sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 alias installbrew='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 alias installchsrc='curl https://chsrc.run/posix | sudo bash'
 alias mkdatedir='mkdir $(date "+%Y%m%d")'
