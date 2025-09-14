@@ -1,10 +1,14 @@
+## Prepare
+
+1. install `sudo` `git` `stow`
+1. `localectl set-locale LANG=en_US.UTF-8`
+
 ## Install
 
 1. `git clone http://github.com/pauldo/init`
 1. `cd init`
 1. `source dotfiles/.appendshrc`
 1. `installbrew`
-1. `brew install stow`
 1. `./init.sh`
 
 ## Software
