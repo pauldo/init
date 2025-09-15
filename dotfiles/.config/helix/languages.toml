@@ -1,0 +1,58 @@
+
+# https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.snippets-ls]
+command = "snippets-ls"
+args = ["-config", "/home/cheems/.config/helix/snippets/php.json"]
+
+[language-server.tabby]
+command = "npx"
+args = ["tabby-agent", "--stdio"]
+
+[[language]]
+name = "php"
+file-types = ["php"]
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "intelephense", "tabby" ]
+
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "rest"
+grammar = "jsonc"
+scope = "source.rest"
+injection-regex = "rest"
+file-types = ["rest", "jsonc"]
+comment-tokens = "#"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "python"
+language-servers = [ "ruff" ]
+auto-format = true
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+language-servers = ["gopls", "golangci-lint2-langserver"]
+
+[language-server.golangci-lint2-langserver]
+command = "golangci-lint-langserver"
+
+[language-server.golangci-lint2-langserver.config]
+command = [
+  "golangci-lint",
+  "run",
+  "--output.json.path",
+  "stdout",
+  "--show-stats=false",
+  "--issues-exit-code=1",
+]
