@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-stow dotfiles
-echo "source ~/.appendshrc" >>~/.bash_profile
-source ~/.bash_profile
+stow --adopt dotfiles
+echo "[[ -f ~/.append ]] && source ~/.append" >>$HOME/.bash_profile
+[[ -f $HOME/.zshrc ]] && echo "[[ -f ~/.append ]] && source ~/.append" >>$HOME/.zshrc
+[[ -f ~/.append ]] && source ~/.append

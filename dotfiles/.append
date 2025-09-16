@@ -1,0 +1,4 @@
+[[ -f $HOME/.alias ]] && source $HOME/.alias
+[[ -f $HOME/.appendshrc ]] && source $HOME/.appendshrc
+[[ -f $HOME/.appendshrc_proxy ]] && source $HOME/.appendshrc_proxy
+[[ -f $HOME/.appendshrc_projects ]] && source $HOME/.appendshrc_projects
