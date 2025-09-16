@@ -1,31 +1,22 @@
 server {
   listen 50000;
   charset utf-8;
-  server_name domain.local _;
-  root /path/to/laravel/public;
+  server_name localhost 127.0.0.1 _;
+  root  /path/to/laravel/public;
   index index.php index.html index.htm;
 
-  try_files $uri $uri/ /index.php?$query_string;
-  # location / {
-  #   try_files $uri $uri/ /index.php$is_args$args;
-  #   if (!-e $request_filename) {
-  #     rewrite  ^(.*)$  /index.php?s=/$1  last;
-  #   }
-  # }
-
   location / {
-    add_header 'Access-Control-Allow-Origin' '*';
-    add_header 'Access-Control-Allow-Credentials' 'true';
-    add_header 'Access-Control-Allow-Headers' 'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,X-Requested-With';
-    add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS';
-    if ($request_method = 'OPTIONS') {
-      return 204;
-    }
-    include fastcgi_params;
-    fastcgi_pass 127.0.0.1:9000;
-    fastcgi_param SCRIPT_FILENAME $document_root/index.php;
+    try_files $uri $uri/ /index.php?$query_string;
   }
 
-  access_log access.log  main;
-  error_log  error.log  error;
+  location ~ .+\.php($|/) {
+    fastcgi_pass 127.0.0.1:9000;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_split_path_info ^((?U).+.php)(/?.+)$;
+    fastcgi_param PATH_INFO $fastcgi_path_info;
+    include fastcgi_params;
+  }
+
+  access_log /path/to/laravel/storage/logs/access.log;
+  error_log  /path/to/laravel/storage/logs/error.log;
 }

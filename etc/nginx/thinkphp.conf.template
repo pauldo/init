@@ -1,7 +1,7 @@
 server {
   listen 50001;
   charset utf-8;
-  server_name thinkphp.local 127.0.0.1 _;
+  server_name localhost 127.0.0.1 _;
   root  /path/to/thinkphp/public;
   index index.php index.html index.htm;
 
@@ -21,6 +21,6 @@ server {
     include fastcgi_params;
   }
 
-  access_log access.log  main;
-  error_log  error.log  error;
+  access_log /path/to/thinkphp/runtime/log/access.log;
+  error_log  /path/to/thinkphp/runtime/log/error.log;
 }
