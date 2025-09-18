@@ -1,0 +1,48 @@
+configpath: /Users/paul/Library/Application Support/nom/config.yml
+showfavourites: false
+autoread: true
+version: ""
+feeds:
+    - url: http://www.ruanyifeng.com/blog/atom.xml
+      name: ruanyifeng
+    - url: https://v2ex.com/index.xml
+      name: v2ex
+    - url: https://www.freebuf.com/feed
+      name: freebuf
+    - url: https://plink.anyfeeder.com/pentitugua
+      name: penti
+    - url: https://plink.anyfeeder.com/infoq/recommend
+      name: infoq
+    - url: https://plink.anyfeeder.com/bbc/cn
+      name: bbc-cn
+    - url: https://plink.anyfeeder.com/nytimes/dual
+      name: 0-nytimes
+    - url: https://plink.anyfeeder.com/bbc
+      name: bbc-top
+    - url: https://plink.anyfeeder.com/time
+      name: time
+    - url: https://web.dev/static/blog/feed.xml
+      name: webdev
+    - url: https://plink.anyfeeder.com/techcrunch
+      name: techcrunch
+    - url: https://www.biede.com/feed/
+      name: biede
+    - url: https://www.williamlong.info/rss.xml
+      name: yueguangblog
+    - url: https://cn.nytimes.com/rss.html
+      name: nytimes-en
+    - url: https://feeds.bbci.co.uk/zhongwen/trad/rss.xml
+      name: bbc-cn
+ordering: desc
+filtering:
+    defaultIncludeFeedName: false
+showread: true
+theme:
+    glamour: dark
+    titleColor: "62"
+    titleColorFg: "231"
+    filterColor: "62"
+    selectedItemColor: "170"
+    readIcon: ✓
+http:
+    mintls: TLS 1.2
