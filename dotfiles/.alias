@@ -10,5 +10,6 @@ alias installbrew='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/
 alias installchsrc='curl https://chsrc.run/posix | sudo bash'
 alias installsingbox='curl -fsSL https://sing-box.app/install.sh | sh'
 alias installxcmd='eval "$(curl https://get.x-cmd.com)"'
+alias installreinstall='curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh || wget -O ${_##*/} $_'
 alias mkdatedir='mkdir $(date "+%Y%m%d")'
 alias checkrestriction="bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)"
