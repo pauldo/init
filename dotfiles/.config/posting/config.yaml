@@ -1,0 +1,10 @@
+spacing: compact
+theme: transp
+layout: horizontal
+keymap:
+  send-request: ctrl+j,alt+enter
+  search-requests: ctrl+r
+  jump: ctrl+o,enter
+editor: vim
+use_host_environment: true
+animation: full
