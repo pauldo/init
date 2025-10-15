@@ -3,6 +3,8 @@ showfavourites: false
 autoread: true
 version: ""
 feeds:
+    - url: https://www.discoverdev.io/rss.xml
+      name: discoverdev
     - url: http://www.ruanyifeng.com/blog/atom.xml
       name: ruanyifeng
     - url: https://v2ex.com/index.xml
