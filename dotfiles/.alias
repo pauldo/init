@@ -13,3 +13,5 @@ alias installxcmd='eval "$(curl https://get.x-cmd.com)"'
 alias installreinstall='curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh || wget -O ${_##*/} $_'
 alias mkdatedir='mkdir $(date "+%Y%m%d")'
 alias checkrestriction="bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)"
+alias nowts='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s"'
+alias nowdt='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%Y-%m-%d %H:%M:%S"'
