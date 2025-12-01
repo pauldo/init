@@ -18,7 +18,7 @@ export LC_NAME=en_US.UTF-8
 export LESSCHARSET=utf-8
 
 export EDITOR="nvim"
-export PATH="$PATH:/usr/local/node/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/composer/vendor/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:/home/linuxbrew/.linuxbrew/bin"
+export PATH="$PATH:/usr/local/node/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/composer/vendor/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/.venv/bin:/home/linuxbrew/.linuxbrew/bin"
 
 
 function ts2dt { date -j -f "%s" "$1" "+%Y-%m-%d %H:%M:%S"; }

@@ -1,6 +1,6 @@
 ## Prepare
 
-1. install `sudo` `git` `stow`
+1. install `sudo` `git` `stow` `locales` `build-essential`
 1. `localectl set-locale LANG=en_US.UTF-8`
 
 ## Install
