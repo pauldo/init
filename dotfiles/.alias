@@ -15,8 +15,8 @@ alias mkdatedir='mkdir $(date "+%Y%m%d")'
 alias checkrestriction="bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)"
 alias ts='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s"'
 alias dt='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%Y-%m-%d %H:%M:%S"'
-if [[ -d "$HOME/.trash/" ]]; then
-    alias rm=trash
-    function trash(){mv -f $@ $HOME/.trashbin/}
-    function cleartrash(){/usr/bin/rm -rf $HOME/.trashbin/*}
-fi
+# if [[ -d "$HOME/.trash/" ]]; then
+#     alias rm=trash
+#     function trash(){mv -f $@ $HOME/.trashbin/}
+#     function cleartrash(){/usr/bin/rm -rf $HOME/.trashbin/*}
+# fi

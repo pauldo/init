@@ -18,6 +18,7 @@ enable = false
 hidden = false
 
 [keys.normal]
+space.B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
 "=" = [
   "extend_to_line_bounds",
   "format_selections",
