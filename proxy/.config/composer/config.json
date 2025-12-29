@@ -1,5 +1,9 @@
 {
-    "config": {},
+    "config": {
+        "audit": {
+            "block-insecure": false
+        }
+    },
     "repositories": {
         "packagist": {
             "type": "composer",
