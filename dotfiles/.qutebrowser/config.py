@@ -2,7 +2,8 @@ config.load_autoconfig()
 c.content.proxy = "http://127.0.0.1:7890"
 c.window.transparent = True
 c.window.hide_decoration = True
-c.tabs.show = "multiple"
+c.tabs.show = "switching"
+c.statusbar.show = "in-mode"
 c.colors.webpage.darkmode.enabled = True
 c.url.default_page = "https://google.com/"
 c.url.searchengines = {"DEFAULT": "https://google.com/search?q={}"}
@@ -22,4 +23,6 @@ config.bind("J", "back")
 config.bind("K", "forward")
 config.bind("H", "tab-prev")
 config.bind("L", "tab-next")
-config.bind("<Ctrl-TAB>", "tab-next")
+# config.bind("<Ctrl-tab>", "help")
+config.bind("<Cmd-T>", "open -t {url}")
+config.bind("<Cmd-W>", "tab-close")
