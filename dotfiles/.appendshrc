@@ -22,7 +22,30 @@ export PATH="$PATH:/usr/local/node/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.c
 
 export JAVA_HOME=/opt/homebrew/opt/openjdk
 
-function ts2dt { date -j -f "%s" "$1" "+%Y-%m-%d %H:%M:%S"; }
-function dt2ts { date -j -f "%Y-%m-%d %H:%M:%S" "$1" "+%s"; }
+export UNAMEOUT="$(uname -s)"
+function ts {
+  case ${UNAMEOUT} in
+      Linux*)     date +%s;;
+      Darwin*)    date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s";;
+  esac
+}
+function dt {
+  case ${UNAMEOUT} in
+      Linux*)     date +'%Y-%m-%d %H:%M:%S';;
+      Darwin*)    date -j -f "%a %b %d %T %Z %Y" "`date`" "+%Y-%m-%d %H:%M:%S";;
+  esac
+}
+function ts2dt {
+  case ${UNAMEOUT} in
+      Linux*)     date -d "@$1" +'%Y-%m-%d %H:%M:%S';;
+      Darwin*)    date -j -f "%s" "$1" "+%Y-%m-%d %H:%M:%S";;
+  esac
+}
+function dt2ts {
+  case ${UNAMEOUT} in
+      Linux*)     date -d "$1" +'%s';;
+      Darwin*)    date -j -f "%Y-%m-%d %H:%M:%S" "$1" "+%s";;
+  esac
+}
 #export -f ts2dt dt2ts
 
